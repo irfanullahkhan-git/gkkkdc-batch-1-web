@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Student Form</title>
+    <style>
+        .input{
+            width: 100%; 
+            padding: 8px; 
+            margin-bottom: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px;
+        }
+        label{
+            display: block; 
+            margin-bottom: 5px;
+        }
+
+        .range{
+            width: 100%; 
+            padding: 8px; 
+            margin-bottom: 10px;
+        }
+
+        fieldset{
+            margin-bottom: 10px; 
+            border: 1px solid #ccc; 
+            padding: 10px; 
+            border-radius: 4px;
+        }
+
+        .uploader{
+            width: 100%; padding: 8px; margin-bottom: 10px;
+        }
+        [type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .button{
+            color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;
+        }
+        .submit_button{
+            background-color: #4CAF50;
+        }
+        .clear_button{
+            background-color: #f44336;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px;">
+    <h1 style="text-align: center; color: #333;">Comprehensive Student Form</h1>
+    <form style="max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required class="input">
+
+        <label for="email" >Email:</label>
+        <input type="email" id="email" name="email" required class="input">
+
+        <label for="password" >Password:</label>
+        <input type="password" id="password" name="password" required class="input">
+
+        <label for="dob" >Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required class="input">
+
+        <label for="age" >Age:</label>
+        <input type="number" id="age" name="age" min="0" max="120" class="input">
+
+        <label for="gender" >Gender:</label>
+        <select id="gender" name="gender" required class="input">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="address" >Address:</label>
+        <textarea id="address" name="address" rows="3" required class="input"></textarea>
+
+        <label for="phone" >Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required class="input">
+
+        <label for="course" >Desired Course:</label>
+        <input type="text" id="course" name="course" required class="input">
+
+        <label for="color" >Favorite Color:</label>
+        <input type="color" id="color" name="color" class="input">
+
+        <label for="website" >Personal Website:</label>
+        <input type="url" id="website" name="website" class="input">
+
+        <label for="score" >Entrance Exam Score:</label>
+        <input type="range" id="score" name="score" min="0" max="100" class="range">
+
+        <label for="time" >Preferred Interview Time:</label>
+        <input type="time" id="time" name="time" class="input">
+
+        <label for="week" >Preferred Start Week:</label>
+        <input type="week" id="week" name="week" class="input">
+
+        <label for="month" >Preferred Start Month:</label>
+        <input type="month" id="month" name="month" class="input">
+
+        <fieldset>
+            <legend>Extracurricular Interests:</legend>
+            <label >
+                <input type="checkbox" name="interests" value="sports"> Sports
+            </label>
+            <label >
+                <input type="checkbox" name="interests" value="music"> Music
+            </label>
+            <label style="display: block;">
+                <input type="checkbox" name="interests" value="art"> Art
+            </label>
+        </fieldset>
+
+        <fieldset >
+            <legend>Preferred Study Mode:</legend>
+            <label >
+                <input type="radio" name="study_mode" value="full_time" required> Full-time
+            </label>
+            <label style="display: block;">
+                <input type="radio" name="study_mode" value="part_time" required> Part-time
+            </label>
+        </fieldset>
+
+        <label for="photo" >Upload Photo:</label>
+        <input type="file" class="uploader" id="photo" name="photo" accept="image/*">
+
+        <label for="comments" >Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" class="input"></textarea>
+
+        <label style="display: block; margin-bottom: 10px;">
+            <input type="checkbox" name="terms" required >
+            I agree to the terms and conditions
+        </label>
+
+        <input type="hidden" name="form_id" value="student_admission_2023">
+
+        <button type="submit" class="button submit_button">Submit Application</button>
+        <button type="reset" class="button clear_button">Reset Form</button>
+    </form>
+</body>
+</html>

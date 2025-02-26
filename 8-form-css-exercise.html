@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f0f0f0;">
+    <form style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <h1 style="text-align: center; color: #3a86ff;">Travel Booking Form</h1>
+        
+        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+            <div style="flex: 1;">
+                <label for="firstname" style="display: block; margin-bottom: 5px;">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="flex: 1;">
+                <label for="lastname" style="display: block; margin-bottom: 5px;">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="email" style="display: block; margin-bottom: 5px;">Email:</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+            <div style="flex: 1;">
+                <label for="departure" style="display: block; margin-bottom: 5px;">Departure:</label>
+                <input type="text" id="departure" name="departure" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="flex: 1;">
+                <label for="destination" style="display: block; margin-bottom: 5px;">Destination:</label>
+                <input type="text" id="destination" name="destination" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+            <div style="flex: 1;">
+                <label for="departuredate" style="display: block; margin-bottom: 5px;">Departure Date:</label>
+                <input type="date" id="departuredate" name="departuredate" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="flex: 1;">
+                <label for="returndate" style="display: block; margin-bottom: 5px;">Return Date:</label>
+                <input type="date" id="returndate" name="returndate" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="travelers" style="display: block; margin-bottom: 5px;">Number of Travelers:</label>
+            <input type="number" id="travelers" name="travelers" min="1" max="10" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label for="travelclass" style="display: block; margin-bottom: 5px;">Travel Class:</label>
+            <select id="travelclass" name="travelclass" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                <option value="">Select Class</option>
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first">First Class</option>
+            </select>
+        </div>
+
+        <fieldset style="margin-bottom: 15px; border: 1px solid #ddd; padding: 10px; border-radius: 4px;">
+            <legend>Preferred Airlines (Optional):</legend>
+            <label style="display: block; margin-bottom: 5px;">
+                <input type="checkbox" name="airlines" value="delta"> Delta
+            </label>
+            <label style="display: block; margin-bottom: 5px;">
+                <input type="checkbox" name="airlines" value="united"> United
+            </label>
+            <label style="display: block;">
+                <input type="checkbox" name="airlines" value="american"> American
+            </label>
+        </fieldset>
+
+        <div style="margin-bottom: 15px;">
+            <label for="specialrequests" style="display: block; margin-bottom: 5px;">Special Requests:</label>
+            <textarea id="specialrequests" name="specialrequests" rows="3" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px;">
+                <input type="checkbox" name="newsletter" value="yes"> Sign up for our newsletter
+            </label>
+        </div>
+
+        <button type="submit" style="background-color: #3a86ff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; width: 100%;">Book Now</button>
+    </form>
+</body>
+</html>

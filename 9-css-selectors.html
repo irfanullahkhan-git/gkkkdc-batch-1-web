@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demo</title>
+    <style>
+        /* Tag selector */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        /* Class selector */
+        .highlight {
+            background-color: yellow;
+            padding: 5px;
+        }
+
+        /* ID selector */
+        #main-title {
+            color: navy;
+            text-align: center;
+        }
+
+        /* Multiple class selector */
+        .text-bold.red {
+            font-weight: bold;
+            color: red;
+        }
+
+        /* Attribute selector */
+        [title] {
+            border-bottom: 1px dotted #999;
+            cursor: help;
+        }
+
+        /* Attribute value selector */
+        [type="email"] {
+            background-color: #e8f0fe;
+            border: 1px solid #4285f4;
+        }
+
+        /* Pseudo-class selector */
+        li:nth-child(odd) {
+            background-color: #e0e0e0;
+        }
+
+        /* Pseudo-element selector */
+        p::first-letter {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* Multiple selector */
+        h2, h3 {
+            color: #4a4a4a;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">CSS Selectors Demo</h1>
+    
+    <div class="container">
+        <p>This is a <span class="highlight">simple demonstration</span> of various CSS selectors.</p>
+        <p>We're using different types of selectors to style this page.</p>
+        
+        <h2>List of items</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+        
+        <h3>More examples</h3>
+        <p class="text-bold red">This text uses multiple classes for styling.</p>
+        <p><span title="This is a tooltip">Hover over me</span> to see a tooltip.</p>
+        
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+        </form>
+    </div>
+</body>
+</html>
