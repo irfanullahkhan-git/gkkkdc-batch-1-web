@@ -1,0 +1,41 @@
+<html>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .container{
+            background-color: green;
+            width: 10%;
+        }
+        @media only screen and (max-width: 810px){
+
+            body{
+                background-color: yellow;
+            }
+            .container{
+                background-color: chartreuse;
+                width: 50% !important;
+            }
+        
+        }
+
+        @media only screen and (max-width: 400px){
+            body{
+                background-color: aqua;
+            }
+            .container{
+                background-color: yellow;
+                width: 90% !important;
+            }   
+        }
+
+        .container{
+            color: red;
+            font-size: 20px;
+            width: 10%
+        }
+        
+    </style>
+    <body>
+        <div class="container">Hello World</div>
+    </body>
+</html>
