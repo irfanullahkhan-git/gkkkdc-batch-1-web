@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>
+            function changeText(){
+                var myElement = document.getElementById("demo");
+                document.getElementById("demo").innerHTML = "Hello i am from Javascript";
+                myElement.innerHTML = "Hello again i am from Javascript";
+                myElement.style.color = "red";
+            }            
+
+            function writeToDocument(){
+                document.write("Hello i just came here!!!");
+            }
+
+            function displayAlert(){
+                window.alert("Hello i am Alert.");
+            }
+
+            function displayInConsole(){
+                console.log("Hello i am your console.");
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <h1 id="demo">Hello World</h1>
+        <button onclick="changeText()">Click Me For Inner HTML</button>
+        <button onclick="writeToDocument()">Click Me For Document Write</button>
+        <button onclick="displayAlert()">Click Me For Alert</button>
+        <button onclick="displayInConsole()">Click Me For Console</button>
+    </body>
+</html>
