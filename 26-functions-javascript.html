@@ -1,0 +1,35 @@
+<html>
+    <script>
+        let product = "Mobile";
+        console.log("Product Name: ", product);
+
+        product = "Laptop";
+        console.log("Product Name: ", product);
+
+        product = "Bike";
+        console.log("Product Name: ", product);
+    
+        
+        let a = 1, b = 2, c = 3;
+        // root = (b**2 - 4 * a * c)/2 * a;
+        root = getRoot(a, b, c);
+        // console.log("Root: ", root);
+        displayRoot(root);
+        let n1 = 10; x = 2; az= 7;
+        // root = (x**2 - 4 * n1 * az)/2 * n1;
+        root = getRoot(n1, x, az);
+        // console.log("Root: ", root);
+        displayRoot(root);
+
+
+        function getRoot(num1, num2, num3){
+            calculated_root = (num2**2 - 4 * num1 * num3)/2 * num1;
+            return calculated_root;
+        }
+
+        function displayRoot(root){
+            console.log("Calculated Root Value: ", root);
+        }
+
+    </script>
+</html>
