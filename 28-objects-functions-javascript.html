@@ -1,0 +1,43 @@
+<html>
+    <h1 id="demo"></h1>
+
+    <script>
+        let element = document.getElementById("demo");
+        element.innerHTML = "Hello<br/>";
+
+        let gift = {watch: 1, shirt: 1};
+        let deal = {
+                    price: 2300, 
+                    name: "Best for Buddies", 
+                    burgers: 2, 
+                    pieces: 2,
+                    fries: "medium", 
+                    cold_drinks: 2, 
+                    sauce: 3,
+                    gift
+                };
+        // element.innerHTML = deal;
+        // element.innerHTML = "Price: "+ deal.price+"<br/>Burgers: "+deal.burgers;
+        // element.innerHTML = `Price: ${deal.price} <br/> Burgers: ${deal.burgers}`;
+
+        let deal_values = Object.values(deal);
+        console.log(deal_values);
+
+        let deal_entries = Object.entries(deal);
+        console.log(deal_entries);
+
+        for(let [property_name, property_value] of Object.entries(deal) ){
+            element.innerHTML += `${property_name.toUpperCase()}: ${property_value} <br/>`;
+        }
+        
+        console.log(deal);
+        let deal_string = JSON.stringify(deal);
+        console.log(deal_string);
+
+        let deal_object = JSON.parse(deal_string);
+        console.log(deal_object);
+        
+
+    </script>
+
+</html>

@@ -31,5 +31,22 @@
             console.log("Calculated Root Value: ", root);
         }
 
+
+
+        let global_variable = 10;
+        let function_var = 25;
+
+        function displayVariables(){
+            let function_var = 15;
+            if(2 > 1){
+                let function_var = 3;
+            }
+            console.log("Function Var inside function ", function_var);
+        }
+
+        displayVariables();
+        console.log("Function var outside function ", function_var);
+
+
     </script>
 </html>

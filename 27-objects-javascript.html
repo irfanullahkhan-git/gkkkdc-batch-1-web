@@ -1,0 +1,79 @@
+<html>
+    <script>
+        let deal = {
+                    price: 2300, 
+                    name: "Best for Buddies", 
+                    burgers: 2, 
+                    pieces: 2,
+                    fries: "medium", 
+                    cold_drinks: 2, 
+                    sauce: 3
+                };
+
+        console.log(deal);
+        // Update any property
+        deal.price = 2500;
+
+        // Add new Property
+        deal.points = 50;
+        console.log(deal);
+
+        console.log("Deal 1 Price: ", deal.price);
+        console.log("Deal 1 Price: ", deal["price"]);
+        
+        // Delete any property
+        delete deal.cold_drinks;
+        console.log(deal);
+
+        let gift = {
+            watch: 1,
+            perfumes: 2, 
+            mobile: 1,
+            displayGift: function(){
+                console.log("Gift Detail");
+                console.log(this.watch," Watch | ", this.perfumes," Perfumes | ", this.mobile," Mobile");
+            }
+        };
+        deal.gift = gift;
+        console.log(deal);
+
+        let deal_2 = {
+                    price: 2300, 
+                    name: "Best for Buddies", 
+                    burgers: 2, 
+                    pieces: 2,
+                    fries: "medium", 
+                    cold_drinks: 2, 
+                    sauce: 3,
+                    // gift: gift
+                    gift
+                };
+
+        console.log(deal_2);
+
+        // Methods
+        let deal_3 = {
+                    price: 2300, 
+                    name: "Best for Buddies", 
+                    burgers: 2, 
+                    pieces: 2,
+                    fries: "medium", 
+                    cold_drinks: 2, 
+                    sauce: 3,
+                    // gift: gift
+                    gift,
+                    displayDeal: function(){
+                        console.log("DEAL");
+                        console.log("Name: ", this.name);
+                        console.log("Price: ", this.price);
+                        console.log("Burgers: ", this.burgers);
+                        console.log("Fries: ", this.fries);
+                        console.log("Cold Drinks: ", this.cold_drinks);
+                        this.gift.displayGift();
+                    } 
+                };
+        console.log(deal_3);
+        deal_3.displayDeal();
+
+    </script>
+</html>

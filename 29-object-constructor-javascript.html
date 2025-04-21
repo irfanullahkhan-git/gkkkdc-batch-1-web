@@ -1,0 +1,20 @@
+<html>
+
+    <script>
+        let deal = {price: 10, burgers: 2};
+        deal.sause = 10;
+
+        function Deal(price, burgers, sause){
+            this.price = price;
+            this.burgers = burgers;
+            this.sause = sause;
+            this.displayDeal = function(){
+                console.log(`Price: ${this.price} - Burgers: ${this.burgers}`);
+            }
+        }
+
+        let deal1 = new Deal(20, 3, 3);
+        let deal2 = new Deal(30, 4, 4);
+        deal.displayDeal();
+    </script>
+</html>
