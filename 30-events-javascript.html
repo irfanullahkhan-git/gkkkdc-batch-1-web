@@ -1,0 +1,41 @@
+<html>
+    <body id="body">
+        <button 
+        onclick="
+            let num1 = 10;
+            let num2 = 20;            
+            console.log('i have been clicked. ', num1 + num2);
+        "
+        ondblclick="
+            console.log('i have been clicked twice.');
+        "
+        >Click Me</button>
+
+        <button onclick="displayAlert()">Show Warning</button>
+        <button onclick="changeColor()">Change Screen Color</button>
+        <button onclick="resetColor()">Change Screen Color</button>
+        <button onclick="toggleColor()">Toggle Color</button>
+        <script>
+            function displayAlert(){
+                alert("Warning, Please be aware, this action can not be undone");
+            }
+
+            function changeColor(){
+                let bodyElement = document.getElementById("body");
+                bodyElement.style.backgroundColor = "red";
+            }
+
+            function resetColor(){
+                let bodyElement = document.getElementById("body");
+                bodyElement.style.backgroundColor = "unset";
+            }
+            let currentColor = "unset";
+            function toggleColor(){
+                let bodyElement = document.getElementById("body");
+                if(currentColor == "red"){
+                    bodyElement.s
+                }
+            }
+        </script>
+    </body>
+</html>
