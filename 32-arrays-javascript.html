@@ -1,0 +1,36 @@
+<html>
+    <body>
+
+        <script>
+            let numbers = [1,2,3,4,5];
+            console.log(numbers);
+            console.log(numbers[0]);
+            numbers[0] = 10;
+            console.log(numbers[0]);
+            numbers[1] = "two";
+            numbers[2] = true;
+            numbers[3] = 10.55;
+
+            let person = {name: "Ali", age: 20, address: "Nowshera"};
+            numbers[4] = person;
+            console.log(numbers);
+
+            // array methods & properties
+            let length_of_array = numbers.length;
+            console.log("Length of Array is: ", length_of_array);
+            
+            for(let index = 0; index < numbers.length; index++){
+                console.log(numbers[index]);
+            }
+
+            console.log("First Element: ", numbers[0]);
+            console.log("Last Element: ", numbers[length_of_array-1]);
+
+            let currency = [100, 10, 5, 20, 50, 75,2,1, 500, 5000, 1000];
+            currency.sort();
+            currency.push(10000);
+            console.log(currency);
+
+        </script>
+    </body>
+</html>

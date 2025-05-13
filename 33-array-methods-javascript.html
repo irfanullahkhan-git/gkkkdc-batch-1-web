@@ -1,0 +1,71 @@
+<html>
+    <body>
+        <script>
+            let fruits = ["Banana", "Apple", "Mango", "Orange"];
+            let all_fruits = fruits.toString();
+            console.log(all_fruits);
+
+            let fruit = fruits.at(2); // fruits[2];
+            console.log(fruit);
+
+            let fruits_string = fruits.join();
+            console.log(fruits_string);
+
+            fruits_string = fruits.join("-*-");
+            console.log(fruits_string);
+
+            let other_fruits = fruits_string.split("-*-");
+            console.log("other_fruits", other_fruits);
+
+            let poppedFruit = fruits.pop();
+            console.log(poppedFruit);
+            // after pop, array will be
+            console.log(fruits);
+
+            fruits.push("Kiwi");
+            console.log(fruits);
+
+            fruits.shift();
+            console.log(fruits);
+
+            fruits.unshift("PineApple");
+            console.log(fruits);
+
+            fruits[fruits.length] = "Peach";
+            console.log(fruits);
+
+            delete fruits[0];
+            console.log(fruits);
+            console.log(fruits[0]);
+            fruits[0] = "PineApple";
+
+            let vegitables = ["LadyFinger", "Potato", "Cucumber"];
+            let dryFruits = ["Almonds", "Peanuts"];
+
+            let edibles = fruits.concat(vegitables, dryFruits);
+            // edibles = fruits.concat(fruits);
+            // edibles = fruits.concat("Strawberry");
+            console.log(edibles);
+
+
+            let myArr = [[1,2], [3,4]];
+            console.log(myArr);
+
+            let newArr = myArr.flat();
+            console.log(newArr);
+
+            console.log(fruits);
+
+            fruits.splice(2, 0, "Lemon", "Pear");
+            // fruits.splice(2, 1, "Lemon", "Kiwi");
+            // fruits.splice(2, 3, "Lemon", "Kiwi");
+            console.log(fruits);
+
+            fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.splice(0,1);
+            console.log(fruits);
+
+        </script>
+
+    </body>
+</html>
