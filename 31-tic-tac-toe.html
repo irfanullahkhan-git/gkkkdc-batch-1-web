@@ -15,23 +15,23 @@
 
         </style>
     </head>
-    <body>
+    <body onkeypress="MoveByKey(event)">
 
         <div class="main_container">
             <div class="row">
-                <div class="col" onclick="Move(this, 0)"></div>
-                <div class="col" onclick="Move(this, 1)"></div>
-                <div class="col" onclick="Move(this, 2)"></div>
+                <div class="col" id="col_0" onclick="Move(this, 0)"></div>
+                <div class="col" id="col_1" onclick="Move(this, 1)"></div>
+                <div class="col" id="col_2" onclick="Move(this, 2)"></div>
             </div>
             <div class="row">
-                <div class="col" onclick="Move(this, 3)"></div>
-                <div class="col" onclick="Move(this, 4)"></div>
-                <div class="col" onclick="Move(this, 5)"></div>
+                <div class="col" id="col_3" onclick="Move(this, 3)"></div>
+                <div class="col" id="col_4" onclick="Move(this, 4)"></div>
+                <div class="col" id="col_5" onclick="Move(this, 5)"></div>
             </div>
             <div class="row">
-                <div class="col" onclick="Move(this, 6)"></div>
-                <div class="col" onclick="Move(this, 7)"></div>
-                <div class="col" onclick="Move(this, 8)"></div>
+                <div class="col" id="col_6" onclick="Move(this, 6)"></div>
+                <div class="col" id="col_7" onclick="Move(this, 7)"></div>
+                <div class="col" id="col_8" onclick="Move(this, 8)"></div>
             </div>
         </div>
 
@@ -72,6 +72,14 @@
                     alert("Player "+turn+" Won");
                 }
             
+            }
+
+            function MoveByKey(event){
+                if(event.key > 0 && event.key <= 9){
+                    let targetPoisition = event.key - 1;
+                    let targetCol = document.getElementById("col_"+targetPoisition);
+                    Move(targetCol, targetPoisition);
+                }
             }
         </script>
     </body>
