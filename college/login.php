@@ -25,7 +25,11 @@
             <label>Password</label>
             <input type="password" name="password" />
             <br/>
+            <input type="checkbox" name="remember_me" />
+            <label>Remember Me</label>
+            <br/>
             <input type="submit" value="Login"/>
+
             <input type="reset" value="Clear Form"/>
         </form>
 
