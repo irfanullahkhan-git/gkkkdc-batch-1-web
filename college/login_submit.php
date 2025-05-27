@@ -1,14 +1,9 @@
-<?php 
+<?php
+    include 'database.php';
     session_start();
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $host = "127.0.0.1";
-    $db_user = "root";
-    $db_password = "bh0ja";
-    $db_name = "college";
-
-    $connection = new mysqli($host, $db_user, $db_password, $db_name);
 
     $query = "SELECT * FROM students WHERE email = '$username' AND password = '$password'";
 
