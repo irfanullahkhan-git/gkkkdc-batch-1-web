@@ -12,11 +12,14 @@ if(!isset($_SESSION["user_logged_in"]) || $_SESSION["user_logged_in"] != "yes"){
         while($row = $db_response->fetch_assoc()){
             $_SESSION["user_id"] = $user_id = $row["ID"];
             $_SESSION["user_name"] = $row["Name"];
+            $_SESSION["user_data"] = $row;
         }
     }else{
         header("Location: http://127.0.0.1/college/login.php");
     }
 }
+
+$user_data = $_SESSION["user_data"];
 
 
 ?>

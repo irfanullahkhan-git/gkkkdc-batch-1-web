@@ -9,7 +9,7 @@
     </head>
     <body>
         <h1>Admission Form</h1>
-        <form method="post" action="/college/admission_post_data.php">
+        <form method="post" action="/college/admission_post_data.php" enctype="multipart/form-data">
             <label>Name</label>
             <input type="text" name="name">
             <br>
@@ -26,12 +26,12 @@
             <br>
 
             <label>Gender</label>
-            <input type="radio" name="gender" value="male">
-            <label>Male</label>
-            
-
             <input type="radio" name="gender" value="female">
             <label>Female</label>
+            
+
+            <input type="radio" name="gender" value="male">
+            <label>Male</label>
             <br>
 
             <label>Department</label>

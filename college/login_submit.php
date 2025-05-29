@@ -14,6 +14,8 @@
         while($row = $db_response->fetch_assoc()){
             $_SESSION["user_id"] = $user_id = $row["ID"];
             $_SESSION["user_name"] = $row["Name"];
+
+            $_SESSION["user_data"] = $row;
         }
 
         // check if user enable Remember me
